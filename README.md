@@ -1,2 +1,2 @@
 # Face-Recognition
-Face recognition attendance system using Python and Java 
+Face Recognition Attendance System using Python and Java 

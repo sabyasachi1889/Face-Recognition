@@ -1,0 +1,18 @@
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfRect;
+import org.opencv.core.Rect;
+import org.opencv.objdetect.CascadeClassifier;
+
+public class FaceDetector {
+    private CascadeClassifier faceDetector;
+
+    public FaceDetector(String classifierPath) {
+        faceDetector = new CascadeClassifier(classifierPath);
+    }
+
+    public MatOfRect detectFaces(Mat image) {
+        MatOfRect faceDetections = new MatOfRect();
+        faceDetector.detectMultiScale(image, faceDetections);
+        return faceDetections;
+    }
+}
